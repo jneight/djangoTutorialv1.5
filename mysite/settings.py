@@ -1,6 +1,5 @@
-import os
 # Django settings for mysite project.
-PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -73,7 +72,6 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/hkr/Desarrollo/python-env/mysite/mysite/static',
 )
 
 # List of finder classes that know how to find static files in
@@ -111,7 +109,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 TEMPLATE_DIRS = (
                 '/home/hkr/Desarrollo/python-env/mysite/templates',
-#                os.path.join(PROJECT_PATH, 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -124,20 +121,10 @@ INSTALLED_APPS = (
     'polls',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'allaccess',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
 
-AUTHENTICATION_BACKENDS = (
-    # Default backend
-    'django.contrib.auth.backends.ModelBackend',
-    # Additional backend
-    'allaccess.backends.AuthorizedServiceBackend',
-)
-
-LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = '/'
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

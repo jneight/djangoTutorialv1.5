@@ -18,7 +18,7 @@
                 <p>Your profile info is given below.</p>
                 <p><a href="{% url 'logout' %}">Logout</a></p>
                 <pre>
-                    {{ info|pprint }}
+                    Hola {{ info.name }}, tu email es {{ info.email }}
                 </pre>
             </div>
         {% else %}

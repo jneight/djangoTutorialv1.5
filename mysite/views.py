@@ -1,8 +1,8 @@
 from django.core.urlresolvers import reverse
 from django.shortcuts import render
 
-from allaccess.views import OAuthRedirect
-from allaccess.views import OAuthCallback
+#from allaccess.views import OAuthRedirect
+#from allaccess.views import OAuthCallback
 
 def home(request):
     "Simple homepage view"

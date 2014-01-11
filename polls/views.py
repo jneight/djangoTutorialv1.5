@@ -10,6 +10,8 @@ from django.utils import timezone
 from polls.models import Poll
 from polls.models import Choice
 
+import pdb
+
 class IndexView(generic.ListView):
         template_name = 'polls/index.html'
         context_object_name = 'latest_poll_list'
@@ -18,6 +20,7 @@ class IndexView(generic.ListView):
                 """Return the last five published polls (not including those set to be
                 published in the future)
                 """
+                pdb.set_trace()
                 return Poll.objects.filter(
                                 pub_date__lte=timezone.now()
                        ).order_by('-pub_date')[:5]
@@ -25,7 +28,7 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
         model = Poll
         template_name = 'polls/detail.html'
-        
+
         def get_queryset(self):
             """
             Excludes any polls that aren't published yet.

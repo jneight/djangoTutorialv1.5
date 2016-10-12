@@ -1,6 +1,5 @@
-djangoTutorialv1.5
+djangoTutorialv1.10
 ==================
 
-Code for parts 1-6 of the django tutorial as for version 1.5 (https://docs.djangoproject.com/en/1.5/intro/tutorial01/)
+Code for parts 1-6 of the django tutorial as for version 1.10 (https://docs.djangoproject.com/en/1.10/intro/tutorial01/)
 
-Change line 15 and 111 of mysite/settings with your path
